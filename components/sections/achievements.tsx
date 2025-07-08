@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import SectionHeading from "@/components/ui/section-heading"
 import AchievementCard from "@/components/ui/achievement-card"
 import { cn } from "@/lib/utils"
+import { GlowingEffect } from "@/components/ui/glowing-effect"
 
 export default function Achievements() {
   const [mounted, setMounted] = useState(false)
@@ -41,7 +42,22 @@ export default function Achievements() {
               transitionDelay: mounted ? `${index * 150}ms` : "0ms",
             }}
           >
-            <AchievementCard icon={achievement.icon} title={achievement.title} description={achievement.description} />
+            <div className="relative">
+              <GlowingEffect
+                spread={35}
+                glow={true}
+                disabled={false}
+                proximity={90}
+                inactiveZone={0.2}
+                borderWidth={2}
+                movementDuration={1.8}
+              />
+              <AchievementCard
+                icon={achievement.icon}
+                title={achievement.title}
+                description={achievement.description}
+              />
+            </div>
           </div>
         ))}
       </div>

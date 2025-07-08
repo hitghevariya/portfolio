@@ -5,6 +5,7 @@ import Image from "next/image"
 import { Code, Briefcase, GraduationCap, MapPin } from "lucide-react"
 import SectionHeading from "@/components/ui/section-heading"
 import { cn } from "@/lib/utils"
+import { GlowingEffect } from "@/components/ui/glowing-effect"
 
 export default function About() {
   const [mounted, setMounted] = useState(false)
@@ -48,6 +49,15 @@ export default function About() {
           )}
         >
           <div className="relative w-full aspect-square max-w-md mx-auto">
+            <GlowingEffect
+              spread={45}
+              glow={true}
+              disabled={false}
+              proximity={120}
+              inactiveZone={0.3}
+              borderWidth={3}
+              movementDuration={2.5}
+            />
             <div className="absolute inset-0 bg-gradient-to-tr from-teal-500/20 to-teal-300/20 rounded-2xl -rotate-6 transform scale-95"></div>
             <div className="absolute inset-0 bg-gray-900/80 backdrop-blur-sm rounded-2xl border border-gray-800/50"></div>
             <div className="relative h-full w-full overflow-hidden rounded-2xl">
@@ -83,15 +93,23 @@ export default function About() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {quickFacts.map((fact, index) => (
-              <div
-                key={index}
-                className="bg-gray-900/30 backdrop-blur-sm p-4 rounded-xl border border-gray-800/50 hover:border-teal-500/50 transition-all duration-300 hover:shadow-[0_0_15px_rgba(45,212,191,0.15)]"
-              >
-                <div className="flex items-start gap-3">
-                  <div className="mt-1">{fact.icon}</div>
-                  <div>
-                    <h3 className="font-medium text-gray-200">{fact.title}</h3>
-                    <p className="text-sm text-gray-400">{fact.description}</p>
+              <div key={index} className="relative">
+                <GlowingEffect
+                  spread={25}
+                  glow={true}
+                  disabled={false}
+                  proximity={70}
+                  inactiveZone={0.4}
+                  borderWidth={1.5}
+                  movementDuration={1.5}
+                />
+                <div className="bg-gray-900/30 backdrop-blur-sm p-4 rounded-xl border border-gray-800/50 hover:border-teal-500/50 transition-all duration-300 hover:shadow-[0_0_15px_rgba(45,212,191,0.15)]">
+                  <div className="flex items-start gap-3">
+                    <div className="mt-1">{fact.icon}</div>
+                    <div>
+                      <h3 className="font-medium text-gray-200">{fact.title}</h3>
+                      <p className="text-sm text-gray-400">{fact.description}</p>
+                    </div>
                   </div>
                 </div>
               </div>
