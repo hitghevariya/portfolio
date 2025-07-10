@@ -16,11 +16,15 @@ export default function Projects() {
 
   const projects = [
     {
+      
       title: "AI Resume Roaster",
-      description: "AI-powered resume analysis tool that provides feedback and roasting with file upload functionality",
-      date: "Jan 2025",
-      techStack: ["Streamlit", "Python", "PDF Processing"],
-      codeUrl: "https://github.com/hitghevariya/resumeroaster/blob/main/main.py",
+      description:
+      "AI Resume Roaster is an intelligent web-based tool that evaluates resumes using AI-powered algorithms. It highlights strengths and weaknesses, provides actionable feedback on structure, skills, and keywords, and scores resumes based on industry best practices.",
+      date: "June 2025",
+      techStack: ["Python", "OpenAI API", "Streamlit", "NLP", "Resume Parsing"],
+      codeUrl: "https://github.com/hitghevariya/ai-resume-roaster"
+
+
     },
     {
       title: "Total Video Duration Calculator",
@@ -30,6 +34,15 @@ export default function Projects() {
       techStack: ["Python", "moviepy"],
       codeUrl: "https://github.com/hitghevariya/Total-Video-Duration-Calculator/blob/master/main.py",
     },
+    {
+      title: "Weather Dashboard App",
+      description:
+        "Weather Dashboard App is a React-based web application that allows users to search for current weather conditions in any city around the world. It fetches real-time data using the OpenWeatherMap API and dynamically changes the theme based on the weather. The app provides temperature,   humidity, wind speed, and weather descriptions in a clean, responsive UI.",
+      date: "July 2025",
+      techStack: ["React", "TypeScript", "Tailwind CSS", "Axios", "Vite", "OpenWeatherMap API"],
+      codeUrl: "https://github.com/hitghevariya/weather-dashboard"
+}
+,
   ]
 
   return (
