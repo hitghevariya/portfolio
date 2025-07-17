@@ -41,8 +41,16 @@ export default function Projects() {
       date: "July 2025",
       techStack: ["React", "TypeScript", "Tailwind CSS", "Axios", "Vite", "OpenWeatherMap API"],
       codeUrl: "https://github.com/hitghevariya/weather-dashboard"
-}
-,
+    },
+    
+    {
+       title: "Personal Assistant Chatbot",
+       description:
+       "Personal Assistant Chatbot is an AI-powered web application designed to simulate a smart assistant for handling everyday tasks. Built with React and powered by the Gemini API, this chatbot can respond intelligently to user queries in real-time. The app features a sleek UI, responsive design, and supports conversation history, helping users stay productive with natural language interactions.",
+      date: "July 2025",
+      techStack: ["React", "JavaScript", "Tailwind CSS", "Gemini API", "Vite", "OpenAI/Cursor"],
+      codeUrl: "https://github.com/hitghevariya/personal-assistant-chatbot"
+    }
   ]
 
   return (
